@@ -1,0 +1,1132 @@
+
+        /* 기본 스타일링 */
+
+        h1 {
+            margin: 0;
+            padding: 0;
+            margin-bottom: 150px;
+        }
+
+        body,
+        p {
+            margin: 0;
+            padding: 0;
+            margin-top: 0px;
+        }
+
+        .sidebar {
+            position: relative;
+            width: 250px;
+            height: 100vh;
+            background: #DDDDDD;
+            color: white;
+            padding: 1em;
+        }
+
+        .sidebar::after{
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 10%;
+            bottom: 10%;
+            width: 2px;
+            background-color: #000;
+        }
+
+        .sidebar .menu i {
+            color: #000
+        }
+
+        h1 {
+            margin: 5px;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .content {
+            flex-grow: 1;
+            padding: 1em;
+            background: #fff;
+            text-align: center;
+            position: relative;
+        }
+
+        .content.hide {
+            display: none;
+        }
+
+        .menu {
+            cursor: pointer;
+            /* 커서 속성 추가 */
+            padding: 10px 15px;
+            margin-bottom: 5px;
+            background-color: #fff;
+            /* 메뉴 항목 배경색 */
+            color: black;
+            /* 메뉴 항목 글자색 */
+            border-radius: 5px;
+            /* 모서리 둥글게 */
+            transition: background-color 0.3s;
+            /* 배경색 변경 애니메이션 */
+            font-size: 2em;
+            font-weight: bold;
+            border-radius: 30px;
+        }
+
+        .menu:hover {
+            background-color: #d4eaf7;
+            /* 마우스 호버 시 배경색 변경 */
+            border-radius: 30px;
+        }
+
+        .mainContent .content {
+            align-items: center;
+        }
+
+        #image {
+            height: 50px;
+            /* 원하는 높이 */
+            vertical-align: middle;
+            /* 수직 정렬 */
+            margin-right: 10px;
+            /* 오른쪽 여백 */
+        }
+
+        .square1 {
+            background: lightgrey;
+            box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.05), inset 0px -4px 8px rgba(0, 0, 0, 0.05);
+            margin-top: 102px;
+            width: 500px;
+            height: 300px;
+            background-color: #f5f4f1;
+            position: absolute;
+            top: 41.5%;
+            left: 17%;
+            transform: translate(-50%, -159%);
+            font-size: 40px;
+            border-radius: 15px;
+        }
+        
+        .square1 .listTitle {
+            margin-top: 15px;
+            border-bottom: none;
+        }
+        .square11 {
+            display: flex;
+            flex-direction: column;
+            background: lightgrey;
+            box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.05), inset 0px -4px 8px rgba(0, 0, 0, 0.05);
+            margin-top: 102px;
+            width: 500px;
+            max-height: 500px;
+            background-color: #f5f4f1;
+            position: absolute;
+            top: 41.5%;
+            left: 17%;
+            transform: translate(-50%, -26%);
+            overflow-y: auto;
+            font-size: 14px;
+            border-radius: 15px;
+        }
+        .square11 .listTitle {
+            font-size: 40px;
+            margin-top: 15px;
+            border-bottom: none;
+        }
+        .square11 li {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            align-items: center;
+            justify-content: center;
+        }
+        .square11 li > * {
+            align-items: center;
+            margin-right: 10px;
+        }
+
+        .square2 {
+            margin-top: 90px;
+            width: 900px;
+            /* 네모의 너비 */
+            height: 100%;
+            /* 네모의 높이 */
+            position: absolute;
+            top: 29%;
+            left: 63%;
+            transform: translate(-50%, -29%);
+            cursor: pointer;
+            /* 마우스 오버 시 클릭 모양으로 변경 */
+        }
+
+        .square3 {
+            margin-top: 40px;
+            background: lightgrey;
+            box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.05), inset 0px -4px 8px rgba(0, 0, 0, 0.05);
+            width: 900px;
+            /* 네모의 너비 */
+            height: 200px;
+            /* 네모의 높이 */
+            background-color: #f5f4f1;
+            /* 네모의 배경 색상 */
+            position: absolute;
+            top: 75%;
+            left: 63%;
+            transform: translate(-50%, -80%);
+        }
+
+        .square4 {
+            position: relative;
+            /* 상대 위치 지정 */
+            margin-right: 100px;
+            margin-top: 10px;
+            background: lightgrey;
+            box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.05), inset 0px -4px 8px rgba(0, 0, 0, 0.05);
+            width: 400px;
+            /* 네모의 너비 */
+            height: 600px;
+            /* 네모의 높이 */
+            background-color: #f5f4f1;
+            /* 네모의 배경 색상 */
+            font-size: 40px;
+            text-align: left;
+            /* position, top, left, transform 속성 제거 */
+        }
+
+        .square5 {
+            margin-left: 80px;
+            margin-top: 10px;
+            background: lightgrey;
+            box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.05), inset 0px -4px 8px rgba(0, 0, 0, 0.05);
+            width: 400px;
+            /* 네모의 너비 */
+            height: 600px;
+            /* 네모의 높이 */
+            background-color: #f5f4f1;
+            /* 네모의 배경 색상 */
+            font-size: 40px;
+            text-align: left;
+            /* position, top, left, transform 속성 제거 */
+        }
+
+
+        .video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .videoInput {
+            display: none;
+        }
+
+        .uploadPrompt {
+            color: #FFF;
+            font-size: 20px;
+            text-align: center;
+            padding-top: 200px;
+        }
+
+        .listTitle {
+            margin-bottom: 20px;
+            /* 타이틀과 구분선 사이의 여백 */
+            padding-bottom: 10px;
+            /* 타이틀과 구분선 사이의 패딩 */
+            border-bottom: 2px solid black;
+            /* 하얀색 구분선 */
+        }
+
+        .uploadText {
+            color: black;
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        .uploadImage {
+            width: 10%;
+            /* 이미지의 너비 조정 */
+            margin: 20px auto;
+            /* 상하 20px, 좌우 자동 마진으로 중앙 정렬 */
+            display: block;
+            /* 블록 레벨 요소로 설정 */
+        }
+
+        .priceText {
+            text-align: center;
+            color: black;
+            font-size: 50px;
+            font-weight: bold;
+            border-bottom: 2px solid white;
+            /* 하얀색 구분선 */
+        }
+
+        .priceText2 {
+            text-align: center;
+            color: black;
+            font-size: 50px;
+            font-weight: bold;
+            margin-top: 80px;
+            /* 하단에 위치 */
+            width: 100%;
+            /* 부모 컨테이너의 전체 너비 */
+            border-top: 2px solid white;
+            /* 하얀색 구분선 */
+        }
+
+        .priceBoldText {
+            color: black;
+            font-size: 40px;
+            font-weight: normal;
+            /* 하얀색 구분선 */
+            margin-top: 30px;
+            margin-left: 20px;
+
+        }
+
+        .priceNormalText {
+            color: black;
+            font-size: 17px;
+            font-weight: normal;
+            /* 하얀색 구분선 */
+            margin-top: 5px;
+            margin-left: 20px;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* 세로 방향 중앙 정렬 */
+            text-align: center;
+            position: relative;
+            height: 100vh;
+            /* 전체 뷰포트 높이 */
+        }
+        
+        .squareContainer {
+            display: flex;
+            /* 수평 정렬을 위한 flexbox 사용 */
+            justify-content: center;
+            /* 중앙 정렬 */
+            align-items: center;
+            /* 수직 방향 중앙 정렬 */
+            margin-top: -350px;
+            gap: 20px;
+        }
+
+        .buttonContainer {
+            text-align: center;
+            /* 버튼을 중앙에 위치시킴 */
+            margin-top: 50px;
+            /* 버튼과 위 요소 사이의 여백 */
+        }
+
+        .customButton {
+            display: block;
+            /* 블록 레벨 요소로 설정 */
+            margin: 20px auto;
+            /* 위아래 20px 마진, 좌우 자동으로 중앙 정렬 */
+            padding: 10px 20px;
+            /* 내부 여백 */
+            background-color: #3CC2FF;
+            /* 배경색 */
+            color: white;
+            /* 글자색 */
+            border: none;
+            /* 테두리 제거 */
+            border-radius: 5px;
+            /* 모서리 둥글게 */
+            font-size: 20px;
+            /* 글자 크기 */
+            cursor: pointer;
+            /* 마우스 오버 시 포인터 커서로 변경 */
+            transition: background-color 0.3s;
+            /* 배경색 변경시 애니메이션 효과 */
+        }
+
+        .customButton:hover {
+
+            background-color: #79edff;
+            /* 마우스 오버 시 배경색 변경 */
+        }
+
+        .mainContentContainer {
+            margin-top: 230px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 세로축 중앙 정렬 */
+        }
+        .mainInner {
+            display: flex;
+        }
+
+
+        /* 반응형 디자인 */
+        @media screen and (max-width: 600px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+            }
+
+            .container {
+                flex-direction: column;
+            }
+        }
+
+        .customButton2 {
+            position: absolute;
+            top: 68.3%;
+            /* 예: 650px */
+            left: 76.5%;
+            /* 예: 50% */
+            transform: translate(-50%, -50%);
+            display: block;
+            /* 블록 레벨 요소로 설정 */
+            margin: 20px auto;
+            /* 위아래 20px 마진, 좌우 자동으로 중앙 정렬 */
+            padding: 10px 20px;
+            /* 내부 여백 */
+            background-color: #3CC2FF;
+            /* 배경색 */
+            color: white;
+            /* 글자색 */
+            border: none;
+            /* 테두리 제거 */
+            border-radius: 5px;
+            /* 모서리 둥글게 */
+            font-size: 20px;
+            /* 글자 크기 */
+            cursor: pointer;
+            /* 마우스 오버 시 포인터 커서로 변경 */
+            transition: background-color 0.3s;
+            /* 배경색 변경시 애니메이션 효과 */
+        }
+
+        .customButton2:hover {
+
+            background-color: #79edff;
+            /* 마우스 오버 시 배경색 변경 */
+        }
+
+        .customButton3 {
+            position: absolute;
+            top: 68.3%;
+            /* 예: 650px */
+            left: 89.4%;
+            /* 예: 50% */
+            transform: translate(-50%, -50%);
+            display: block;
+            /* 블록 레벨 요소로 설정 */
+            margin: 20px auto;
+            /* 위아래 20px 마진, 좌우 자동으로 중앙 정렬 */
+            padding: 10px 20px;
+            /* 내부 여백 */
+            background-color: #3CC2FF;
+            /* 배경색 */
+            color: white;
+            /* 글자색 */
+            border: none;
+            /* 테두리 제거 */
+            border-radius: 5px;
+            /* 모서리 둥글게 */
+            font-size: 20px;
+            /* 글자 크기 */
+            cursor: pointer;
+            /* 마우스 오버 시 포인터 커서로 변경 */
+            transition: background-color 0.3s;
+            /* 배경색 변경시 애니메이션 효과 */
+        }
+
+        .customButton3:hover {
+
+            background-color: #79edff;
+            /* 마우스 오버 시 배경색 변경 */
+        }
+
+        .customButton4 {
+            position: absolute;
+            top: 3%;
+            /* 예: 650px */
+            left: 89.6%;
+            /* 예: 50% */
+            transform: translate(-50%, -50%);
+            display: block;
+            /* 블록 레벨 요소로 설정 */
+            margin: 20px auto;
+            /* 위아래 20px 마진, 좌우 자동으로 중앙 정렬 */
+            padding: 10px 20px;
+            /* 내부 여백 */
+            background-color: #3CC2FF;
+            /* 배경색 */
+            color: white;
+            /* 글자색 */
+            border: none;
+            /* 테두리 제거 */
+            border-radius: 5px;
+            /* 모서리 둥글게 */
+            font-size: 20px;
+            /* 글자 크기 */
+            cursor: pointer;
+            /* 마우스 오버 시 포인터 커서로 변경 */
+            transition: background-color 0.3s;
+            /* 배경색 변경시 애니메이션 효과 */
+        }
+
+        .customButton4:hover {
+
+            background-color: #79edff;
+            /* 마우스 오버 시 배경색 변경 */
+        }
+        .container1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .squareVertical {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            margin-left: 20px;
+        }
+        .headerContainer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            background: #DDDDDD;
+        }
+
+
+
+        .container {
+            display: flex;
+            background: #fff;
+            padding: 0;
+        }
+
+        .sidebar {
+            position: relative;
+            width: 12%;
+            height: 100vh;
+            background: #fff;
+            color: white;
+            padding: 1em;
+        }
+
+        .sidebar::after{
+            content: ''; /* 의사 요소에 내용 없음 */
+            position: absolute; /* 절대 위치 설정 */
+            right: 0; /* 오른쪽 정렬 */
+            top: 5%; /* 상단에서부터 25%의 위치에 설정 */
+            bottom: 5%; /* 하단에서부터 25%의 위치에 설정 */
+            width: 2px; /* 선의 너비 */
+            background-color: #DDDDDD; /* 선의 색상 */
+        }
+
+        .sidebar .menu i {
+            color: #000
+        }
+
+        #image {
+            height: 50px;
+            /* 원하는 높이 */
+            vertical-align: middle;
+            /* 수직 정렬 */
+            margin-right: 10px;
+            /* 오른쪽 여백 */
+        }
+
+        .menu {
+            cursor: pointer;
+            /* 커서 속성 추가 */
+            padding: 10px 15px;
+            margin-bottom: 5px;
+            background-color: #fff;
+            /* 메뉴 항목 배경색 */
+            color: black;
+            /* 메뉴 항목 글자색 */
+            border-radius: 5px;
+            /* 모서리 둥글게 */
+            transition: background-color 0.3s;
+            /* 배경색 변경 애니메이션 */
+            font-size: 2em;
+            font-weight: bold;
+            border-radius: 30px;
+        }
+
+        .menu:hover {
+            background-color: #d4eaf7;
+            /* 마우스 호버 시 배경색 변경 */
+            border-radius: 30px;
+        }
+
+
+        section {
+            background: lightgrey;
+            box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.05), inset 0px -4px 8px rgba(0, 0, 0, 0.05);
+            width: 100%;
+            margin-bottom: 20px;
+            background: #f5f4f1;
+            padding: 5px;
+            margin: 0;
+            border-radius: 15px;
+        }
+        #subsection {
+            height: 800px; /* 고정 높이 */
+            max-width: 25%;
+            margin-bottom: 40px;
+            background: #f5f4f1;
+            margin: 15px;
+        }
+        
+        /* #subsection 내의 스크롤바를 스타일링합니다 
+        #subsection::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        #subsection::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        #subsection::-webkit-scrollbar-thumb {
+            background: #888;
+        }
+        
+        #subsection::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }*/
+
+        #captureHighlights {
+            display: flex;
+            border: 1px solid #eee;
+            padding: 15px;
+            background-color: #f9f9f9;
+            height: 75vh;
+            overflow-y: auto; /* 세로 방향 스크롤바 활성화 */
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+   
+        #results {
+            display: flex;
+            border: 1px solid #eee;
+            padding: 15px;
+            background-color: #f9f9f9;
+            height: 75vh;
+            overflow-y: auto; /* 세로 방향 스크롤바 활성화 */
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .result-item {
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 10px;
+            margin-bottom: 10px;
+            width: 95%;
+        }
+        
+        .result-header {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px; /* 헤더와 간격 사이의 여백을 추가 */
+        }
+        
+        .intervals-container .interval {
+            margin-bottom: 5px; /* 각 간격 사이의 여백을 추가 */
+        }
+        
+        .result-duration {
+            color: #666;
+            margin-top: 10px; /* 지속 시간과 간격 사이의 여백을 추가 */
+        }
+
+        video {
+            width: 100%;
+            max-width: 640px;
+            height: 300px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+
+        .video-container {
+            transform: translate(0, -16%);
+        }
+
+        .video-container section:last-child {
+            margin-right: 0; /* 마지막 섹션의 오른쪽 여백 제거 */
+        }
+
+        #videoPlayer1 {
+            max-width: 900px;
+            height: 400px;
+            margin-bottom: 20px;
+        }
+        .sub-container {
+            background: #f5f4f1;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        #create {
+            height: 50px;
+            width: 50px;
+        }
+        .sub-sound {
+            height: 80%;
+            max-width: 40%;
+            display: flex;
+            flex-direction: column;
+            margin: 15px;
+            gap: 20px;
+        }
+        #soundContent {
+            max-width: 85%;
+            gap: 20px;
+            align-items: start;
+            padding: 0;
+            margin: 0;
+        }
+        h2 {
+            height: 20px;
+            text-align: left;
+        }
+
+        #audioForm {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #f2f2f2; /* 배경색 */
+            border-radius: 10px; /* 테두리 둥글게 */
+        }
+
+        #audioForm label {
+            display: block; /* 라벨을 블록 요소로 만들어 줄바꿈 */
+            font-size: 30px;
+            font-weight: 500; /* 라벨 글자 굵기 */
+        }
+
+        #audioForm input[type="text"],
+        #audioForm input[type="number"] {
+            height: 25px;
+            width: 100%; /* 입력 필드 너비 */
+            border: 1px solid #ddd; /* 테두리 */
+            border-radius: 4px; /* 테두리 둥글게 */
+        }
+        .form-group {
+            display: flex; /* Flexbox 적용 */
+            align-items: center; /* 세로 축 중앙 정렬 */
+            margin-bottom: 5px; /* 아래쪽 여백 */
+        }
+
+        .form-group label {
+            margin-right: 10px; /* 라벨과 입력 필드 사이의 간격 */
+            white-space: nowrap; /* 라벨이 줄바꿈 되지 않도록 설정 */
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="number"] {
+            flex-grow: 1; /* 입력 필드가 남은 공간을 모두 차지하도록 설정 */
+        }
+        #ldmButton {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 5px;
+        }
+
+        .controls {
+            text-align: center;
+        }
+        
+        #yas {
+            height: 40px;
+            width: 60px;
+            writing-mode: horizontal-tb;
+            transform: none; /* 변형 없음 */
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        .timeline-container {
+            background-color: #e9e9e9;
+            height: 400px;
+            margin-top: 10px;
+            border-radius: 5px;
+            transform: translate(0, -25%);
+            overflow: hidden;
+        }
+
+        .timeline {
+            width: 100%;
+            height: 20px;
+            background-color: #d4d4d4;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .timeline-seeker {
+            width: 2px;
+            height: 20px;
+            background-color: #007bff;
+            position: absolute;
+            left: 0;
+        }
+
+        .resize-handle {
+            width: 5px;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.1);
+            position: absolute;
+            right: 0;
+            top: 0;
+            cursor: ew-resize;
+        }
+        .list-container {
+            margin-top: 20px;
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .wrapper {
+            width: 200px;
+            height: 60px;
+            position: relative;
+            z-index: 1;
+          }
+          
+          .circle {
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            border-radius: 50%;
+            background-color: #bebebe;
+            left: 15%;
+            transform-origin: 50%;
+            animation: circle7124 .5s alternate infinite ease;
+          }
+          
+          @keyframes circle7124 {
+            0% {
+              top: 60px;
+              height: 5px;
+              border-radius: 50px 50px 25px 25px;
+              transform: scaleX(1.7);
+            }
+          
+            40% {
+              height: 20px;
+              border-radius: 50%;
+              transform: scaleX(1);
+            }
+          
+            100% {
+              top: 0%;
+            }
+          }
+          
+          .circle:nth-child(2) {
+            left: 45%;
+            animation-delay: .2s;
+          }
+          
+          .circle:nth-child(3) {
+            left: auto;
+            right: 15%;
+            animation-delay: .3s;
+          }
+          
+          .shadow {
+            width: 15px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: rgba(0,0,0,0.9);
+            position: absolute;
+            top: 62px;
+            transform-origin: 50%;
+            z-index: -1;
+            left: 15%;
+            filter: blur(1px);
+            animation: shadow046 .5s alternate infinite ease;
+          }
+          
+          @keyframes shadow046 {
+            0% {
+              transform: scaleX(1.5);
+            }
+          
+            40% {
+              transform: scaleX(1);
+              opacity: .7;
+            }
+          
+            100% {
+              transform: scaleX(.2);
+              opacity: .4;
+            }
+          }
+          
+          .shadow:nth-child(4) {
+            left: 45%;
+            animation-delay: .2s
+          }
+          
+          .shadow:nth-child(5) {
+            left: auto;
+            right: 15%;
+            animation-delay: .3s;
+          }
+
+
+
+
+
+        .pack-container {
+            position: relative;
+            display: flex;
+            max-width: 350px;
+            flex-direction: column;
+            border-radius: 12px;
+            background-color: #212121;
+            border: 1px solid #fff;
+            padding: 1.6rem;
+            color: #fff;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            height: 400px;
+        }
+          
+        .header {
+            position: relative;
+            margin: 0;
+            margin-bottom: 2rem;
+            overflow: hidden;
+            border-radius: 0;
+            border-bottom: 1px solid #fff;
+            background: transparent;
+            padding-bottom: 1rem;
+            text-align: center;
+        }
+          
+        .title {
+            display: block;
+            font-family: sans-serif;
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            text-transform: uppercase;
+            color: #fff
+        }
+          
+        .price-container {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 4px;
+            font-family: sans-serif;
+            font-size: 4.5rem;
+            line-height: 1;
+        }
+          
+        .price-container span:first-child {
+            margin-top: 10px;
+            font-size: 2.25rem;
+            line-height: 2.5rem;
+        }
+          
+        .price-container span:last-child {
+            align-self: flex-end;
+            font-size: 2.25rem;
+            line-height: 2.5rem;
+        }
+          
+        .lists {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+          
+        .list {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+          
+        .list span {
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.24);
+            background-color: rgba(255, 255, 255, 0.185);
+            height: 30px;
+            width: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+          
+        .list span svg {
+            height: 12px;
+            width: 12px;
+        }
+          
+        .list p {
+            display: block;
+            font-family: sans-serif;
+        }
+          
+        .button-container {
+            margin-top: 20px;
+            padding: 0;
+        }
+          
+        .button-container button {
+            display: block;
+            width: 100%;
+            background-color: #fff;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            color: #000;
+            outline: 0;
+            border: 0;
+            border-radius: 10px;
+        }
+          
+
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        #dashboardContent {
+            max-width: 100%;
+            gap: 20px;
+            align-items: start;
+            padding: 0;
+            margin: 0;
+        }
+        .dashboardcontainer {
+        
+            flex-wrap: wrap;
+            padding: 20px;
+            width: 100%;
+        }
+        
+        .graph {
+            flex: 1;
+            min-width: 300px;
+            max-height: 420px;
+            background-color: white;
+            margin: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .pie-chart {
+            flex: 1;
+            min-width: 250px;
+            max-width: 400px;
+            
+            background-color: white;
+            margin: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .sound-list {
+            flex: 1;
+            min-width: 300px;
+            max-width: 400px;
+            background-color: white;
+            margin: 10px;
+            padding: 20px;
+            padding-bottom: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .chart-container {
+            display: flex;
+            flex-grow: 1;
+            justify-content: center;
+            flex-basis: 150px;
+            align-items: flex-start;
+        }
+        .line-container {
+            display: flex;
+            flex-grow: 1;
+            justify-content: center;
+            flex-basis: 150px;
+        }
+        .pl-container {
+            display: flex;
+            flex-grow: 1;
+            justify-content: center;
+            flex-basis: 150px;
+        }
+        .sound-container {
+            display: flex;
+            flex-grow: 1;
+            justify-content: center;
+            flex-basis: 150px;
+            
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #333;
+            color: white;
+        }
+
+        .h3 {
+            text-align: center;
+            margin: 10px;
+        }
+        #gLabel {
+            font-weight: bold;
+        }
+
+        ol#list-review li {
+            margin-bottom: 10px; /* 하단 여백을 10px로 설정 */
+        }
+        
+        ol#list-review li {
+            padding-bottom: 10px; /* 내부 하단 여백을 10px로 설정 */
+        }
+
+        ol#list-mostused li {
+            margin-bottom: 10px; /* 하단 여백을 10px로 설정 */
+        }
+        
+        ol#list-mostused li {
+            padding-bottom: 10px; /* 내부 하단 여백을 10px로 설정 */
+        }
+        
+        @media (max-width: 768px) {
+            .chart-container {
+                flex-direction: column;
+            }
+        }
+        

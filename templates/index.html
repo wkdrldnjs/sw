@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>반응형 사이드 메뉴바</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+</head>
+
+<body>
+    <div class="headerContainer">
+    <h1><img src="../static/img/logo.png" alt="A.S.I.A 로고" id="image"> A.S.I.A</h1>
+    <button type="button" class="customButton4" id="merge">영상 추출</button>
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <p id="sound" class="menu"><i class="fas fa-magic"></i> 생성하기</p>
+            <p id="main" class="menu"><i class="fas fa-cut"></i> 편집하기</p>
+            <p id="dashboard" class="menu"><i class="fas fa-chart-line"></i> 대시보드</p>
+        </div>
+
+        <div class="content hide" id="soundContent">
+            <div class="sub-sound">
+            <section>
+                <div class="sub-container">
+                <h2>비디오 업로드</h2>
+                    <form id="uploadForm" enctype="multipart/form-data">
+                    <input type="file" name="file" accept="video/*">
+                    <input type="button" value="업로드" onclick="uploadVideo()">
+                </form>
+                </div>
+                <video id="originalVideoPlayer" controls>
+                    <source src="" type="video/mp4">
+                    비디오를 지원하지 않는 브라우저입니다.
+                </video>
+            </section>
+            <section>
+                <div class="sub-container">
+                <h2>객체 탐지 결과</h2>
+                </div>
+                <video id="labeledVideoPlayer" controls>
+                    <source src="" type="video/mp4">
+                    비디오를 지원하지 않는 브라우저입니다.
+                </video>
+            </section>
+            </div>
+            <section id="subsection">
+                <h2>탐지 결과</h2>
+                <div id="results">
+                    <div class="wrapper" style="display: none;">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="shadow"></div>
+                        <div class="shadow"></div>
+                        <div class="shadow"></div>
+                    </div>
+                </div>
+            </section>
+            <section id="subsection">
+                <h2>캡처 및 캡션 결과</h2>
+                <div id="captureHighlights">
+                    <div class="wrapper" style="display: none;">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="shadow"></div>
+                        <div class="shadow"></div>
+                        <div class="shadow"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="content hide" id="mainContent">
+            <div class="mainInner">
+                <div class="container1">
+                    <div class="square1" id="square1">
+                        <div class="listTitle">Text-to-Sound</div>
+                        <form id="audioForm" method="post">
+                        <div class="form-group">
+                            <label for="text">텍스트:</label>
+                            <input type="text" id="text" name="text">
+                        </div>
+                        <div class="form-group">
+                            <label for="duration">길이(초):</label>
+                            <input type="number" id="duration" name="duration">
+                        </div>
+                        <div id="ldmButton">
+                            <input type="button" value="오디오 생성" onclick="generateAudio()">
+                            <input type="button" value="오디오 저장" onclick="saveAudio()" id="saveButton">
+                        </div>
+                        <audio id="audioPlayer" controls style="display:none;"></audio>
+                    </div>
+                    <div class="square11" id="square11">
+                        <div class="listTitle">효과음 리스트</div>
+                            <ul></ul>
+                    </div>
+                </div>
+                <div class="squareVertical">
+                    <div class="square2">
+                        <div class="video-container">
+                            <video id="videoPlayer1" controls>
+                                <source src="" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="timeline-container">
+                            <div class="timeline" id="videoTimeline">
+                                <div class="timeline-seeker"></div>
+                            </div>
+                        <div class="timeline" id="audioTimeline" style="background-color: #007bff; width: 0;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content hide" id="dashboardContent">
+          
+          <div class="dashboardcontainer">
+            <div class="line-container">
+                <div class="graph">
+                    <label id="gLabel">하루 중 이용 시간대</label>
+                    <canvas id="graph-timeofday"></canvas> <!-- 캔버스 추가 -->
+                </div>
+                <div class="graph">
+                    <label id="gLabel">일일 사운드 생성량</label>
+                    <canvas id="graph-soundcreation"></canvas> <!-- 캔버스 추가 -->
+                </div>
+            </div>
+            <div class="pl-container">
+                <div class="chart-container">
+                    <div class="pie-chart">
+                        <label id="gLabel">요금제 별 비율</label>
+                        <canvas id="chart-subscription"></canvas> <!-- 캔버스 추가 -->
+                    </div>
+                    <div class="pie-chart">
+                        <label id="gLabel">API 및 AI 사용 비율</label>
+                        <canvas id="chart-api-ai"></canvas> <!-- 캔버스 추가 -->
+                    </div>
+                </div>
+                    <div class="sound-container">
+                      <div class="sound-list">
+                        <label id="gLabel">가장 많이 사용된 사운드</label>
+                        <ol id="list-mostused"></ol>
+                      </div>
+                      <div class="sound-list">
+                        <label id="gLabel">사용자 리뷰가 높은 사운드</label>
+                        <ol id="list-review"></ol>
+                      </div>
+                    </div>
+              </div>
+          </div>
+        </div>
+    </div>
+
+    <script src="../static/js/script.js"></script>
+
+</body>
+
+</html>
